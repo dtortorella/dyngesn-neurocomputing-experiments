@@ -66,6 +66,7 @@ parser.add_argument('--model', help='model name', default='dygrae')
 parser.add_argument('--units', help='reservoir units per layer', type=int, default=32)
 parser.add_argument('--device', help='device for torch computations', default='cpu')
 parser.add_argument('--epochs', help='number of epochs', type=int, default=100)
+parser.add_argument('--lr', help='learning rate', type=float, default=0.01)
 parser.add_argument('--trials', help='number of trials', type=int, default=10)
 args = parser.parse_args()
 
@@ -77,7 +78,7 @@ train_time, train_mse, valid_mse, test_time, test_mse = [], [], [], [], []
 
 for _ in range(args.trials):
     model = RecurrentGCN(args.model.lower(), num_features, args.units, num_nodes).to(device)
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
 
     best_val_mse = math.inf
     tic = perf_counter()
