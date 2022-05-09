@@ -1,6 +1,6 @@
 # Experiments for *"Discrete-time Dynamic Graph Echo State Networks"*
 
-Accompanying code to reproduce experiments from the paper "Discrete-time Dynamic Graph Echo State Networks", under submission to Neurocomputing journal.
+Accompanying code to reproduce experiments from the paper "Discrete-time Dynamic Graph Echo State Networks", accepted by the Neurocomputing journal [doi:10.1016/j.neucom.2022.05.001](https://doi.org/10.1016/j.neucom.2022.05.001).
 
 ### Copyright
 
